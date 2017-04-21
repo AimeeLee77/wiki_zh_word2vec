@@ -1,0 +1,2 @@
+# wiki_zh_word2vec
+用Python构建Wiki中文语料词向量模型试验
