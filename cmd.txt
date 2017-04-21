@@ -1,0 +1,15 @@
+1_process.py：
+python 1_process.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt
+
+opencc:
+opencc -i  D:\PyRoot\iDemo\wiki_zh\wiki.zh.txt -o D:\PyRoot\iDemo\wiki_zh\wiki.zh.simp.txt -c t2s.json
+
+3_train_word2vec_model.py：
+python 3_train_word2vec_model.py wiki.zh.simp.seg.txt wiki.zh.model wiki.zh.vector
+
+
+
+备注：
+wiki.zh.txt为wiki中文语料源文件
+wiki.zh.simp.txt为wiki中文语料繁体转换成简体后的文件
+wiki.zh.simp.seg.txt为wiki中文语料简体分词后的结果
