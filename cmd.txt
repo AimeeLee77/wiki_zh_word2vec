@@ -13,3 +13,8 @@ python 3_train_word2vec_model.py wiki.zh.simp.seg.txt wiki.zh.model wiki.zh.vect
 wiki.zh.txt为wiki中文语料源文件
 wiki.zh.simp.txt为wiki中文语料繁体转换成简体后的文件
 wiki.zh.simp.seg.txt为wiki中文语料简体分词后的结果
+
+
+
+
+
