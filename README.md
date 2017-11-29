@@ -4,17 +4,19 @@
 
 ## 一、 开发环境准备
 #### 1.1  python环境
-	
 在[python官网](https://www.python.org/downloads/)下载计算机对应的python版本，本人使用的是Python2.7.13的版本。
 #### 1.2  gensim模块
+
 ######（1）下载模块
 Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两个包，因此需要依次下载对应版本的numpy、scipy、gensim。下载地址：http://www.lfd.uci.edu/~gohlke/pythonlibs/
+
 ######（2）安装模块
 下载完成后，在python安装目录下的Scripts目录中执行cmd命令进行安装。
 
         pip install numpy*.whl
         pip install scipy*.whl
         pip install gensim.whl
+
 ###### （3）验证模块是否安装成功
 输入python命令进入python命令行，分别输入*import numpy; import scipy; import gensim; *没有报错，即安装成功！
 
@@ -25,13 +27,16 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
 #### 2.2  将XML的Wiki数据转换为text格式
 ###### （1）python实现
 编写python程序将XML文件转换为text格式，使用到了gensim.corpora中的WikiCorpus函数来处理维基百科的数据。python代码实现如下所示，文件命名为1_process.py。
+
 ![1_process.py--wiki文件转换代码](http://upload-images.jianshu.io/upload_images/5189322-1b6bb41bafe0cb82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ###### （2）运行程序文件
 在代码文件夹下运行如下cmd命令行，即可得到转换后生成的文件wiki.zh.txt。
 
         D:\PyRoot\iDemo\wiki_zh>python 1_process.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt
+
 ######（3）得到运行结果
+
        2017-04-18 09:24:28,901: INFO: running 1_process.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt
        2017-04-18 09:25:31,154: INFO: Saved 10000 articles.
        2017-04-18 09:26:21,582: INFO: Saved 20000 articles.
@@ -69,15 +74,19 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
 ## 三、Wiki数据预处理
 #### 3.1  中文繁体替换成简体
 Wiki中文语料中包含了很多繁体字，需要转成简体字再进行处理，这里使用到了OpenCC工具进行转换。
+
 ######（1）安装OpenCC
 到以下链接地址下载对应版本的OpenCC，本人下载的版本是opencc-1.0.1-win32。
 https://bintray.com/package/files/byvoid/opencc/OpenCC
 另外，资料显示还有python版本的，使用pip install opencc-python进行安装，未实践不做赘述。
+
 ######（2）使用OpenCC进行繁简转换
 进入解压后的opencc的目录（opencc-1.0.1-win32），双击opencc.exe文件。在当前目录打开dos窗口（*Shift+鼠标右键->在此处打开命令窗口*），输入如下命令行：
 
      opencc -i wiki.zh.txt -o wiki.zh.simp.txt -c t2s.json
+
 则会得到文件wiki.zh.simp.txt，即转成了简体的中文。
+
 ###### （3）结果查看
 解压后的txt有900多M，用notepad++无法打开，所以采用python自带的IO进行读取。Python代码如下：
 
@@ -98,6 +107,7 @@ https://bintray.com/package/files/byvoid/opencc/OpenCC
 #### 3.2  结巴分词
 本例中采用结巴分词对字体简化后的wiki中文语料数据集进行分词，在执行代码前需要安装jieba模块。由于此语料已经去除了标点符号，因此在分词程序中无需进行清洗操作，可直接分词。若是自己采集的数据还需进行标点符号去除和去除停用词的操作。
 Python实现代码如下：
+
 ![2_jieba_participle.py--结巴分词代码](http://upload-images.jianshu.io/upload_images/5189322-6869923d883432af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 代码执行完成后得到一个1.12G大小的文档wiki.zh.simp.seg.txt。分词结果截图如下所示：
