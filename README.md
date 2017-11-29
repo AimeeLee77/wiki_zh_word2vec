@@ -7,10 +7,10 @@
 在[python官网](https://www.python.org/downloads/)下载计算机对应的python版本，本人使用的是Python2.7.13的版本。
 #### 1.2  gensim模块
 
-######（1）下载模块
+###### （1）下载模块
 Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两个包，因此需要依次下载对应版本的numpy、scipy、gensim。下载地址：http://www.lfd.uci.edu/~gohlke/pythonlibs/
 
-######（2）安装模块
+###### （2）安装模块
 下载完成后，在python安装目录下的Scripts目录中执行cmd命令进行安装。
 
         pip install numpy*.whl
@@ -18,7 +18,7 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
         pip install gensim.whl
 
 ###### （3）验证模块是否安装成功
-输入python命令进入python命令行，分别输入*import numpy; import scipy; import gensim; *没有报错，即安装成功！
+输入python命令进入python命令行，分别输入“import numpy; import scipy; import gensim; ”没有报错，即安装成功！
 
 ## 二、Wiki数据获取
 #### 2.1  Wiki中文数据的下载
@@ -35,7 +35,7 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
 
         D:\PyRoot\iDemo\wiki_zh>python 1_process.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt
 
-######（3）得到运行结果
+###### （3）得到运行结果
 
        2017-04-18 09:24:28,901: INFO: running 1_process.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt
        2017-04-18 09:25:31,154: INFO: Saved 10000 articles.
@@ -75,12 +75,12 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
 #### 3.1  中文繁体替换成简体
 Wiki中文语料中包含了很多繁体字，需要转成简体字再进行处理，这里使用到了OpenCC工具进行转换。
 
-######（1）安装OpenCC
+###### （1）安装OpenCC
 到以下链接地址下载对应版本的OpenCC，本人下载的版本是opencc-1.0.1-win32。
 https://bintray.com/package/files/byvoid/opencc/OpenCC
 另外，资料显示还有python版本的，使用pip install opencc-python进行安装，未实践不做赘述。
 
-######（2）使用OpenCC进行繁简转换
+###### （2）使用OpenCC进行繁简转换
 进入解压后的opencc的目录（opencc-1.0.1-win32），双击opencc.exe文件。在当前目录打开dos窗口（*Shift+鼠标右键->在此处打开命令窗口*），输入如下命令行：
 
      opencc -i wiki.zh.txt -o wiki.zh.simp.txt -c t2s.json
