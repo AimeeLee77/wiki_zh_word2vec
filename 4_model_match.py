@@ -6,13 +6,12 @@ import warnings
 import imp
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')# 忽略警告
 import sys  
-imp.reload(sys)  
-sys.setdefaultencoding('utf8')
+imp.reload(sys)
 import gensim
 
 
 if __name__ == '__main__':
-    fdir = '/Users/sy/Desktop/pyRoot/wiki_zh_vec/'
+    fdir = 'build/models/'
     model = gensim.models.Word2Vec.load(fdir + 'wiki.zh.text.model')
 
     word = model.most_similar("足球")
