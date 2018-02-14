@@ -17,6 +17,8 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
         pip install scipy*.whl
         pip install gensim.whl
 
+如上为源项目代码。本人的的此项目更推荐使用pipenv进行安装。安装方法为，执行pip install pipenv之后执行pipenv install。pipenv会根据Pipfile生成环境。具体安装方法间[我的博客](https://exfly.github.io/post/algorithm/wiki_zh_practice_word2vec/)
+
 ###### （3）验证模块是否安装成功
 输入python命令进入python命令行，分别输入“import numpy; import scipy; import gensim; ”没有报错，即安装成功！
 

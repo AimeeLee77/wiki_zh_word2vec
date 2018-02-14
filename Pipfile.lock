@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f496b5386a35dd92cb81a27db90f9d5f4ee2315fde52b7a8a36763be1e242851"
+            "sha256": "dc5ca541ef7d0ad932bf1d23309e90112eb71d6c90ee791b71a71b0aef8160ee"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -33,11 +33,11 @@
         },
         "boto3": {
             "hashes": [],
-            "version": "==1.5.27"
+            "version": "==1.5.28"
         },
         "botocore": {
             "hashes": [],
-            "version": "==1.8.41"
+            "version": "==1.8.42"
         },
         "bz2file": {
             "hashes": [],
@@ -70,6 +70,10 @@
         "jmespath": {
             "hashes": [],
             "version": "==0.9.3"
+        },
+        "nltk": {
+            "hashes": [],
+            "version": "==3.2.5"
         },
         "numpy": {
             "hashes": [],

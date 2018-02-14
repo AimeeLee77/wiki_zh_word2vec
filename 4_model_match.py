@@ -9,14 +9,19 @@ import sys
 imp.reload(sys)
 import gensim
 
+from utils import fn_timer
 
-if __name__ == '__main__':
+@fn_timer
+def main():
     fdir = 'build/models/'
     model = gensim.models.Word2Vec.load(fdir + 'wiki.zh.text.model')
 
     word = model.most_similar("足球")
     for t in word:
         print(t[0],t[1])
+
+if __name__ == '__main__':
+    main()
 
     '''
     word = model.most_similar(positive=[u'皇上',u'国王'],negative=[u'皇后'])

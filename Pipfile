@@ -7,9 +7,9 @@ name = "pypi"
 
 [packages]
 
+nltk = "*"
 gensim = "*"
 jieba = "*"
-
 
 [dev-packages]
 
