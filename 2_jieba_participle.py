@@ -9,8 +9,8 @@ import codecs,sys
 
 
 if __name__ == '__main__':
-    f = codecs.open('wiki.zh.simp.txt', 'r', encoding='utf8')
-    target = codecs.open('wiki.zh.simp.seg.txt', 'w', encoding='utf8')
+    f = codecs.open('build/wiki.zh.simp.txt', 'r', encoding='utf8')
+    target = codecs.open('build/wiki.zh.simp.seg.txt', 'w', encoding='utf8')
     print('open files.')
 
     lineNum = 1
