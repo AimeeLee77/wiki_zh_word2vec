@@ -1,0 +1,18 @@
+[[source]]
+
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+gensim = "*"
+jieba = "*"
+
+
+[dev-packages]
+
+pylint = "*"
+autopep8 = "*"
+flake8 = "*"
