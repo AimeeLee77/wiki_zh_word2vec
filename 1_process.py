@@ -17,15 +17,15 @@ if __name__ == '__main__':
     logger.info("running %s" % ' '.join(sys.argv))
 
     if len(sys.argv) < 3:
-        print globals()['__doc__'] % locals()
+        print(globals()['__doc__'] % locals())
         sys.exit(1)
 
     inp, outp = sys.argv[1:3]
     space = " "
     i = 0
 
-    output = open(outp, 'w')
-    wiki =WikiCorpus(inp, lemmatize=False, dictionary=[])#gensim里的维基百科处理类WikiCorpus
+    output = open(outp, 'w', encoding="utf8")
+    wiki =WikiCorpus(inp, lemmatize=False, dictionary={"test":"test"})#gensim里的维基百科处理类WikiCorpus
     for text in wiki.get_texts():#通过get_texts将维基里的每篇文章转换位1行text文本，并且去掉了标点符号等内容
         output.write(space.join(text) + "\n")
         i = i+1

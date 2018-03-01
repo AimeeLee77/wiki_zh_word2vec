@@ -17,6 +17,8 @@ Word2vec需要使用第三方gensim模块， gensim模块依赖numpy和scipy两�
         pip install scipy*.whl
         pip install gensim.whl
 
+如上为源项目代码。本人的的此项目更推荐使用pipenv进行安装。安装方法为，执行pip install pipenv之后执行pipenv install。pipenv会根据Pipfile生成环境。具体安装方法间[我的博客](https://exfly.github.io/post/algorithm/wiki_zh_practice_word2vec/)
+
 ###### （3）验证模块是否安装成功
 输入python命令进入python命令行，分别输入“import numpy; import scipy; import gensim; ”没有报错，即安装成功！
 
@@ -91,9 +93,13 @@ https://bintray.com/package/files/byvoid/opencc/OpenCC
 解压后的txt有900多M，用notepad++无法打开，所以采用python自带的IO进行读取。Python代码如下：
 
        import codecs,sys
-       f = codecs.open(‘wiki.zh.simp.txt‘,‘r‘,encoding="utf8")
+       f = codecs.open('wiki.zh.simp.txt','r',encoding="utf8")
        line = f.readline()
        print(line)
+
+注：
+  * 更好的方法 使用命令 head -n 100 wiki.zh.simp.txt > wiki.zh.simp_head_100.txt,直接查看wiki.zh.simp_head_100.txt即可
+  * 没有head命令，可以安装[gow](https://github.com/bmatzelle/gow/releases)，或者直接下载[cmder](http://cmder.net/),进入就可以使用head命令了
 
 繁体中文示例截图如下所示：
 
@@ -145,4 +151,4 @@ Python实现代码如下：
 
 ![模型匹配结果](http://upload-images.jianshu.io/upload_images/5189322-4edbb0c058ba5a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-> 至此，使用python对中文wiki语料的词向量建模就全部结束了，wiki.zh.text.vector中是每个词对应的词向量，可以在此基础上作文本特征的提取以及分类。所有代码都已上传至[本人GitHub](https://github.com/AimeeLee77/wiki_zh_word2vec)中，欢迎指教！
+> 至此，使用python对中文wiki语料的词向量建模就全部结束了，wiki.zh.text.vector中是每个词对应的词向量，可以在此基础上作文本特征的提取以及分类。所有代码都已上传至[本人GitHub](https://github.com/ExFly/wiki_zh_word2vec)中，欢迎指教！

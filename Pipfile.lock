@@ -1,0 +1,162 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "dc5ca541ef7d0ad932bf1d23309e90112eb71d6c90ee791b71a71b0aef8160ee"
+        },
+        "host-environment-markers": {
+            "implementation_name": "cpython",
+            "implementation_version": "3.6.3",
+            "os_name": "nt",
+            "platform_machine": "AMD64",
+            "platform_python_implementation": "CPython",
+            "platform_release": "10",
+            "platform_system": "Windows",
+            "platform_version": "10.0.16299",
+            "python_full_version": "3.6.3",
+            "python_version": "3.6",
+            "sys_platform": "win32"
+        },
+        "pipfile-spec": 6,
+        "requires": {},
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.tuna.tsinghua.edu.cn/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "boto": {
+            "hashes": [],
+            "version": "==2.48.0"
+        },
+        "boto3": {
+            "hashes": [],
+            "version": "==1.5.28"
+        },
+        "botocore": {
+            "hashes": [],
+            "version": "==1.8.42"
+        },
+        "bz2file": {
+            "hashes": [],
+            "version": "==0.98"
+        },
+        "certifi": {
+            "hashes": [],
+            "version": "==2018.1.18"
+        },
+        "chardet": {
+            "hashes": [],
+            "version": "==3.0.4"
+        },
+        "docutils": {
+            "hashes": [],
+            "version": "==0.14"
+        },
+        "gensim": {
+            "hashes": [],
+            "version": "==3.3.0"
+        },
+        "idna": {
+            "hashes": [],
+            "version": "==2.6"
+        },
+        "jieba": {
+            "hashes": [],
+            "version": "==0.39"
+        },
+        "jmespath": {
+            "hashes": [],
+            "version": "==0.9.3"
+        },
+        "nltk": {
+            "hashes": [],
+            "version": "==3.2.5"
+        },
+        "numpy": {
+            "hashes": [],
+            "version": "==1.14.0"
+        },
+        "python-dateutil": {
+            "hashes": [],
+            "version": "==2.6.1"
+        },
+        "requests": {
+            "hashes": [],
+            "version": "==2.18.4"
+        },
+        "s3transfer": {
+            "hashes": [],
+            "version": "==0.1.12"
+        },
+        "scipy": {
+            "hashes": [],
+            "version": "==1.0.0"
+        },
+        "six": {
+            "hashes": [],
+            "version": "==1.11.0"
+        },
+        "smart-open": {
+            "hashes": [],
+            "version": "==1.5.6"
+        },
+        "urllib3": {
+            "hashes": [],
+            "version": "==1.22"
+        }
+    },
+    "develop": {
+        "astroid": {
+            "hashes": [],
+            "version": "==1.6.1"
+        },
+        "autopep8": {
+            "hashes": [],
+            "version": "==1.3.4"
+        },
+        "colorama": {
+            "hashes": [],
+            "markers": "sys_platform == 'win32'",
+            "version": "==0.3.9"
+        },
+        "flake8": {
+            "hashes": [],
+            "version": "==3.5.0"
+        },
+        "isort": {
+            "hashes": [],
+            "version": "==4.3.4"
+        },
+        "lazy-object-proxy": {
+            "hashes": [],
+            "version": "==1.3.1"
+        },
+        "mccabe": {
+            "hashes": [],
+            "version": "==0.6.1"
+        },
+        "pycodestyle": {
+            "hashes": [],
+            "version": "==2.3.1"
+        },
+        "pyflakes": {
+            "hashes": [],
+            "version": "==1.6.0"
+        },
+        "pylint": {
+            "hashes": [],
+            "version": "==1.8.2"
+        },
+        "six": {
+            "hashes": [],
+            "version": "==1.11.0"
+        },
+        "wrapt": {
+            "hashes": [],
+            "version": "==1.10.11"
+        }
+    }
+}
