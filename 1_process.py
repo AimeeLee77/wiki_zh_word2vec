@@ -27,7 +27,7 @@ if __name__ == '__main__':
     output = open(outp, 'w')
     wiki =WikiCorpus(inp, lemmatize=False, dictionary=[])#gensim里的维基百科处理类WikiCorpus
     for text in wiki.get_texts():#通过get_texts将维基里的每篇文章转换位1行text文本，并且去掉了标点符号等内容
-        output.write(space.join(text) + "\n")
+        output.write(space.join(text).encode('utf-8') + "\n")
         i = i+1
         if (i % 10000 == 0):
             logger.info("Saved "+str(i)+" articles.")
